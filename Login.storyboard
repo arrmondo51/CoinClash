@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HX2-Bc-h3c">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="JV4-8k-bY4">
+            <objects>
+                <viewController id="HX2-Bc-h3c" customClass="LoginViewController" customModule="CoinClash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nFg-cJ-ras"/>
+                        <viewControllerLayoutGuide type="bottom" id="EZE-eV-hyo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bFG-r8-gD6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fph-Gd-AQS">
+                                <rect key="frame" x="0.0" y="283.5" width="375" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tsj-ab-1gs">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="u8c-a8-2sU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="HX2-Bc-h3c" id="QKu-i5-Mw4"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FMi-T7-ay7">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rzb-We-qgV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="HX2-Bc-h3c" id="kdv-lr-VKd"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZX-HR-zeT">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="NTH-47-fil"/>
+                                </constraints>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login" destination="HX2-Bc-h3c" eventType="touchUpInside" id="5fB-Oi-6Xl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.87338169639999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7ZX-HR-zeT" firstAttribute="leading" secondItem="bFG-r8-gD6" secondAttribute="leading" id="3Rm-fW-syr"/>
+                            <constraint firstItem="EZE-eV-hyo" firstAttribute="top" secondItem="7ZX-HR-zeT" secondAttribute="bottom" id="Nfo-4r-cZ2"/>
+                            <constraint firstAttribute="trailing" secondItem="fph-Gd-AQS" secondAttribute="trailing" id="bb5-Kv-6dw"/>
+                            <constraint firstItem="fph-Gd-AQS" firstAttribute="centerY" secondItem="bFG-r8-gD6" secondAttribute="centerY" id="e8g-BE-iB3"/>
+                            <constraint firstItem="fph-Gd-AQS" firstAttribute="leading" secondItem="bFG-r8-gD6" secondAttribute="leading" id="g86-2z-VMH"/>
+                            <constraint firstAttribute="trailing" secondItem="7ZX-HR-zeT" secondAttribute="trailing" id="xbK-y0-zPc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordField" destination="FMi-T7-ay7" id="cxI-h2-QLN"/>
+                        <outlet property="usernameField" destination="tsj-ab-1gs" id="eeN-aF-Sjp"/>
+                        <segue destination="7BH-eP-PP6" kind="showDetail" identifier="toMain" id="7wn-tj-SRC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="plf-gx-hcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477.60000000000002" y="-147.07646176911544"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="3NP-z5-vqV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="7BH-eP-PP6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="659-Lz-ueB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1158" y="-148"/>
+        </scene>
+    </scenes>
+</document>

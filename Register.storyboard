@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Bu0-3E-0fs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Register View Controller-->
+        <scene sceneID="PoD-Ee-oy5">
+            <objects>
+                <viewController id="Bu0-3E-0fs" customClass="RegisterViewController" customModule="CoinClash" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="13r-cE-NjT"/>
+                        <viewControllerLayoutGuide type="bottom" id="bcD-4O-X4K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0ks-cF-Ff5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Skb-Z8-8sf">
+                                <rect key="frame" x="0.0" y="283.5" width="375" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amm-is-0AL">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="cvq-dM-Jsv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Bu0-3E-0fs" id="Vdj-Et-SHf"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JuK-5F-72s">
+                                        <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="1bC-rY-sLm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="Bu0-3E-0fs" id="8ot-R7-3tB"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wnv-RV-NsJ">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="SEc-Bf-60N"/>
+                                </constraints>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="register" destination="Bu0-3E-0fs" eventType="touchUpInside" id="hea-XM-Iv2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.87338169639999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wnv-RV-NsJ" firstAttribute="leading" secondItem="0ks-cF-Ff5" secondAttribute="leading" id="1Xp-bJ-Khu"/>
+                            <constraint firstItem="Skb-Z8-8sf" firstAttribute="leading" secondItem="0ks-cF-Ff5" secondAttribute="leading" id="FHG-gU-HiA"/>
+                            <constraint firstItem="bcD-4O-X4K" firstAttribute="top" secondItem="Wnv-RV-NsJ" secondAttribute="bottom" id="HPm-s7-wmQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Skb-Z8-8sf" secondAttribute="trailing" id="ZZu-IO-WxF"/>
+                            <constraint firstItem="Skb-Z8-8sf" firstAttribute="centerY" secondItem="0ks-cF-Ff5" secondAttribute="centerY" id="f5l-h2-cBV"/>
+                            <constraint firstAttribute="trailing" secondItem="Wnv-RV-NsJ" secondAttribute="trailing" id="qT3-Bf-rkb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordField" destination="JuK-5F-72s" id="aWr-um-h6s"/>
+                        <outlet property="usernameField" destination="amm-is-0AL" id="gpS-jN-tAX"/>
+                        <segue destination="AEO-Kr-qat" kind="showDetail" identifier="toMain" id="TSb-X8-dqH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7a7-Zn-kC9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477.60000000000002" y="-147.07646176911544"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="kHc-PL-PPg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="AEO-Kr-qat" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTb-m0-iO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="-148"/>
+        </scene>
+    </scenes>
+</document>
